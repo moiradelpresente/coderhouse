@@ -1,0 +1,65 @@
+body{
+    background-color:rgb(255,232,181);
+}
+
+.navBar{
+    min-width: 200px;
+    border-radius: 25px;
+    background: rgb(255,232,181);
+    background: linear-gradient(3deg, rgba(255,232,181,1) 0%, rgba(0,183,221,1) 100%);
+    
+} 
+
+li, ul{
+    font-size: large; 
+}
+
+
+.button {
+	box-shadow: 0px 10px 14px -7px #276873;
+	background:linear-gradient(to bottom, #599bb3 5%, rgba(0,183,221,1) 100%);
+	background-color:#599bb3;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:13px 32px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px  rgba(0,183,221,1);
+    padding-right: 20px;
+    width: 150px;
+}
+.button:hover {
+	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	background-color:#408c99;
+}
+.button:active {
+	position:relative;
+	top:1px;
+}
+
+.columna{
+    flex-direction: column;
+}
+
+textarea{
+    width: 50%;
+}
+
+
+
+.fade-in {
+	animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
