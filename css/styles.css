@@ -1,17 +1,10 @@
 body {
   background-color: rgb(255, 232, 181);
+  margin-top: 0;
 }
 
-.navBar {
-  min-width: 200px;
-  border-radius: 25px;
-  background: rgb(255, 232, 181);
-  background: linear-gradient(3deg, rgba(255, 232, 181, 1) 0%, rgba(0, 183, 221, 1) 100%);
 
-}
-
-li,
-ul {
+li, ul {
   font-size: large;
 }
 
@@ -44,15 +37,10 @@ ul {
   top: 1px;
 }
 
-.columna {
-  flex-direction: column;
-}
 
 textarea {
   width: 50%;
 }
-
-
 
 .fade-in {
   animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
@@ -71,6 +59,47 @@ textarea {
 img {
   width: 100%;
 }
+
+.video__video{
+  width: 50%;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.container {  
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr 1fr 1.5fr 0.5fr;
+  grid-template-rows: 0.2fr 1.7fr 1.1fr;
+  gap: 52px 6px;
+  grid-auto-flow: row;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  grid-template-areas:
+    "Header Header Header Header Header"
+    ". Main Main Main ."
+    "Footer Footer Footer Footer Footer";
+}
+
+.Footer {
+  justify-self: center;
+  align-self: center;
+  grid-area: Footer;
+  color: grey;
+}
+
+.Header { 
+  grid-area: Header; 
+}
+
+.Main {
+  justify-self: stretch;
+  align-self: stretch;
+  grid-area: Main;
+}
+
+
 
 /*
 $ancho: 720px;
