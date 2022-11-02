@@ -1,65 +1,162 @@
-body{
-    background-color:rgb(255,232,181);
+body {
+  background-color: rgb(255, 232, 181);
 }
 
-.navBar{
-    min-width: 200px;
-    border-radius: 25px;
-    background: rgb(255,232,181);
-    background: linear-gradient(3deg, rgba(255,232,181,1) 0%, rgba(0,183,221,1) 100%);
-    
-} 
+.navBar {
+  min-width: 200px;
+  border-radius: 25px;
+  background: rgb(255, 232, 181);
+  background: linear-gradient(3deg, rgba(255, 232, 181, 1) 0%, rgba(0, 183, 221, 1) 100%);
 
-li, ul{
-    font-size: large; 
+}
+
+li,
+ul {
+  font-size: large;
 }
 
 
 .button {
-	box-shadow: 0px 10px 14px -7px #276873;
-	background:linear-gradient(to bottom, #599bb3 5%, rgba(0,183,221,1) 100%);
-	background-color:#599bb3;
-	border-radius:8px;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:20px;
-	font-weight:bold;
-	padding:13px 32px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px  rgba(0,183,221,1);
-    padding-right: 20px;
-    width: 150px;
+  box-shadow: 0px 10px 14px -7px #276873;
+  background: linear-gradient(to bottom, #599bb3 5%, rgba(0, 183, 221, 1) 100%);
+  background-color: #599bb3;
+  border-radius: 8px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 13px 32px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px rgba(0, 183, 221, 1);
+  padding-right: 20px;
+  width: 150px;
 }
+
 .button:hover {
-	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
-	background-color:#408c99;
+  background: linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+  background-color: #408c99;
 }
+
 .button:active {
-	position:relative;
-	top:1px;
+  position: relative;
+  top: 1px;
 }
 
-.columna{
-    flex-direction: column;
+.columna {
+  flex-direction: column;
 }
 
-textarea{
-    width: 50%;
+textarea {
+  width: 50%;
 }
 
 
 
 .fade-in {
-	animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
-  
-  @keyframes fade-in {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
+
+
+@keyframes fade-in {
+  10% {
+    opacity: 0;
+  }
+
+  80% {
+    opacity: 1;
+  }
+}
+img {
+  width: 100%;
+}
+
+/*
+$ancho: 720px;
+$step: 16px;
+$view: customer;
+$lista-colores: whitesmoke, black, tomato, yellowgreen;
+
+@mixin display-flex($tipo, $direction, $justify, $align, $wrap) {
+  display: $tipo;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-content: $align;
+  flex-wrap: $wrap;
+}
+
+p {
+  font-size: $step;
+}
+
+.videos {
+  @include display-flex(flex, row, center, center, wrap);
+
+  &__card {
+    width: $step * 10;
+    height: $step * 16;
+    margin: $step;
+    background-color: yellow;
+    border-radius: $step;
+  }
+}
+
+@if $view ==owner {
+  @media only screen and (min-width: $ancho * 1.5) {
+    .videos {
+      display: flex;
+      flex-wrap: wrap;
+
+      &__video {
+        background-color: beige;
+      }
     }
   }
+}
+
+@else if $view ==customer {
+  @media only screen and (min-width: $ancho) {
+    .videos {
+      display: flex;
+      flex-wrap: wrap;
+
+      &__video {
+        background-color: orange;
+      }
+    }
+  }
+}
+
+@else {
+  p {
+    font-size: $step * 1.15;
+  }
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    width: 8.334% * $i;
+  }
+
+  @media only screen and (min-width: $ancho) {
+    .col-md-#{$i} {
+      width: 8.334% * $i;
+    }
+  }
+}
+
+@each $color in $lista-colores {
+  .theme-#{$color} {
+    @if $color ==black {
+      color: beige;
+    }
+
+    @else {
+      color: black;
+    }
+
+    background-color: $color;
+  }
+}
+*/
