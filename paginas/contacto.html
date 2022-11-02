@@ -6,40 +6,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <title>Fucé Learning</title>
 </head>
 
 <body>
-    <nav>
-        <div class="navBar">
-            <ul>
-                <b>¿Qué necesitas?</b>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="./presentacion.html">Presentacion</a></li>
-                <li><a href="./clases.html">Clases</a></li>
-                <li><a href="./prueba-de-admision.html">Prueba de admisión</a></li>
-                <li><a href="./contacto.html">Contacto</a></li>
-            </ul>
+    <div class="container">
+        <div class="Header">
+                                <b>¿Qué necesitas?</b>
+                                <a class="nav-element" href="../index.html">Inicio</a>
+                                <a class="nav-element" href="./presentacion.html">Presentacion</a>
+                                <a class="nav-element" href="./clases.html">Clases</a>
+                                <a class="nav-element" href="./prueba-de-admision.html">Prueba de admisión</a>
+                                <a class="nav-element" href="./contacto.html">Contacto</a>
         </div>
-    </nav>
-    <div id="Presentacion">
-        <header>
-            <h1 class="centered">Contacto</h1>
-        </header>
-        <div class="centered columna">
-            <p>Nombre:</p> <input placeholder="Tu nombre aqui..."></input>
+        <div class="Main">
+            <header>
+                <h1 class="text-center">Prueba de admisión</h1>
+                <br>
+            </header>
+            <main>
+            <div id="Presentacion" class="text-center">
+                <div>
+                    <p>Nombre:</p> <input placeholder="Tu nombre aqui..."></input>
             <p>Apellido:</p> <input placeholder="Tu apellido aqui..."></input>
             <p>Numero de telefono</p> <input placeholder="Tu numero de telefono aqui..."></input>
             <p>Comentarios:</p> <textarea placeholder="Comentarios..."></textarea>
+                </div>
+            </div>
+            <br>
         </div>
-    </div>
-
-    <footer>
-        <p>
+    </main>
+        <div class="Footer text-center">
             Creado por: Maira Dos Santos
-            <Br>www.fucelearning.com</Br>
-        </p>
-    </footer>
-</body>
-
+            <Br>www.fucelearning.com
+        </div>
+      </div>
 </html>
