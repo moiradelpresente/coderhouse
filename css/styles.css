@@ -8,6 +8,45 @@ li, ul {
   font-size: large;
 }
 
+nav {
+  background-color: #6fb1cf;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: darkblue;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.motivacion {
+ 
+display: flex;
+justify-content: center;
+}
+
+
+.videosPresentacion {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.videosPresentacion iframe {
+  width: 100%;
+  height: 400px;
+}
+
 
 .button {
   box-shadow: 0px 10px 14px -7px #276873;
@@ -56,136 +95,40 @@ textarea {
     opacity: 1;
   }
 }
+
 img {
   width: 100%;
 }
 
-.video__video{
-  width: 50%;
-  padding: 20px;
-  flex-wrap: wrap;
-}
 
-.container {  
-  display: grid;
-  grid-template-columns: 0.5fr 1.5fr 1fr 1.5fr 0.5fr;
-  grid-template-rows: 0.2fr 1.7fr 1.1fr;
-  gap: 52px 6px;
-  grid-auto-flow: row;
-  justify-content: center;
-  align-content: center;
-  justify-items: center;
-  align-items: center;
-  grid-template-areas:
-    "Header Header Header Header Header"
-    ". Main Main Main ."
-    "Footer Footer Footer Footer Footer";
-}
 
 .Footer {
   justify-self: center;
   align-self: center;
-  grid-area: Footer;
   color: grey;
 }
 
-.Header { 
-  grid-area: Header; 
-}
 
 .Main {
   justify-self: stretch;
   align-self: stretch;
-  grid-area: Main;
 }
 
 
-
-/*
-$ancho: 720px;
-$step: 16px;
-$view: customer;
-$lista-colores: whitesmoke, black, tomato, yellowgreen;
-
-@mixin display-flex($tipo, $direction, $justify, $align, $wrap) {
-  display: $tipo;
-  flex-direction: $direction;
-  justify-content: $justify;
-  align-content: $align;
-  flex-wrap: $wrap;
-}
-
-p {
-  font-size: $step;
-}
-
-.videos {
-  @include display-flex(flex, row, center, center, wrap);
-
-  &__card {
-    width: $step * 10;
-    height: $step * 16;
-    margin: $step;
-    background-color: yellow;
-    border-radius: $step;
+@media (max-width: 900px) {
+  .videosPresentacion {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 }
 
-@if $view ==owner {
-  @media only screen and (min-width: $ancho * 1.5) {
-    .videos {
-      display: flex;
-      flex-wrap: wrap;
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
 
-      &__video {
-        background-color: beige;
-      }
-    }
+  nav ul li {
+    margin-top: 5px;
   }
 }
-
-@else if $view ==customer {
-  @media only screen and (min-width: $ancho) {
-    .videos {
-      display: flex;
-      flex-wrap: wrap;
-
-      &__video {
-        background-color: orange;
-      }
-    }
-  }
-}
-
-@else {
-  p {
-    font-size: $step * 1.15;
-  }
-}
-
-@for $i from 1 through 12 {
-  .col-#{$i} {
-    width: 8.334% * $i;
-  }
-
-  @media only screen and (min-width: $ancho) {
-    .col-md-#{$i} {
-      width: 8.334% * $i;
-    }
-  }
-}
-
-@each $color in $lista-colores {
-  .theme-#{$color} {
-    @if $color ==black {
-      color: beige;
-    }
-
-    @else {
-      color: black;
-    }
-
-    background-color: $color;
-  }
-}
-*/
